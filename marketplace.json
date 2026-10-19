@@ -1,0 +1,16 @@
+{
+  "name": "Tessera Marketplace",
+  "plugins": [
+    {
+      "id": "compagesworks.mosaic",
+      "name": "MOSAIC Bridge",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Exports the project and copies the mod into MOSAIC's mods folder.",
+      "icon": "box-seam",
+      "homepage": "https://github.com/CompagesWorks/Tessera-Marketplace",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.mosaic-1.0.0.tessera-plugin",
+      "sha256": "8062104da4c279889b04dcb0f50da8918d82cddfe976a286e5888ab4f2d243ce"
+    }
+  ]
+}
