@@ -1,5 +1,7 @@
 # Tessera Marketplace
 
+[![Add repo to Marketplace](assets/add-to-tessera.png)](https://compagesworks.github.io/Tessera-Marketplace/add.html?repo=CompagesWorks/Tessera-Marketplace)
+
 The official plugin marketplace for [Tessera](https://github.com/CompagesWorks/Tessera). Tessera reads `marketplace.json` at the root of this repository.
 
 ## Format
@@ -38,3 +40,13 @@ The official plugin marketplace for [Tessera](https://github.com/CompagesWorks/T
 ## Your own marketplace
 
 Any GitHub repository with a `marketplace.json` at its root works. In Tessera, open **Plugins → Marketplace → Add a marketplace** and enter `owner/repo`, or an https link to any `.json` file in this format.
+
+### Add-to-Tessera button
+
+Put this in your README, replacing `owner/repo` with your repository. Clicking it opens Tessera, which asks before adding the marketplace.
+
+```markdown
+[![Add repo to Marketplace](https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/assets/add-to-tessera.png)](https://compagesworks.github.io/Tessera-Marketplace/add.html?repo=owner/repo)
+```
+
+The button goes through `add.html` because GitHub removes `tessera://` links from READMEs. The page forwards to `tessera://marketplace/add?repo=owner/repo`, which you can also use directly anywhere custom links are allowed.
