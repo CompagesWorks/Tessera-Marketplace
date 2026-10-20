@@ -31,9 +31,15 @@ Tessera reads `marketplace.json` at the root of this repository.
 ## Adding a plugin
 
 1. Build the package: `npm run plugin -- pack path/to/plugin`
-2. Put it in `plugins/` (or host it anywhere over https, e.g. a GitHub release).
-3. Hash it: `sha256sum plugins/author.plugin-1.0.0.tessera-plugin`
-4. Add an entry to `marketplace.json` and open a pull request.
+2. Put the `.tessera-plugin` file in `plugins/` and open a pull request.
+
+That's it. The **Build marketplace** GitHub Action reads each package's `manifest.json` and fills in `marketplace.json` (name, author, version, description, icon, download link and SHA-256) and the plugin table in the README. On a pull request it only checks that the packages are valid; once merged into `main` it commits the updated files.
+
+To ship a new version, add the new package next to the old one. The highest version is listed. Extra fields you add by hand to an entry, like `homepage`, are kept.
+
+Plugins hosted elsewhere (for example on a GitHub release) can still be added to `marketplace.json` by hand with their own `download` and `sha256`. The action leaves those entries alone.
+
+To run it locally: `python scripts/build.py`
 
 ## Hosting your own marketplace
 
