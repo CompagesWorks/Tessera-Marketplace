@@ -36,7 +36,7 @@
   header img.logo { width: 72px; height: 72px; }
   h1 { margin: 12px 0 4px; font-size: 34px; letter-spacing: -0.02em; }
   .tagline { margin: 0 0 24px; color: var(--muted); }
-  .add img { width: 240px; max-width: 100%; border-radius: 12px; transition: transform 0.15s; }
+  .add img { width: 240px; max-width: 100%; transition: transform 0.15s; }
   .add:hover img { transform: translateY(-2px); }
   .toolbar { display: flex; gap: 12px; align-items: center; margin: 8px 0 20px; flex-wrap: wrap; }
   .toolbar input { flex: 1; min-width: 200px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; }
@@ -52,10 +52,6 @@
   .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); font-size: 13px; text-decoration: none; }
   .btn:hover { border-color: var(--accent); }
   .empty { padding: 40px; border: 1px dashed var(--border); border-radius: 14px; color: var(--muted); text-align: center; }
-  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 48px 0; }
-  .how div { padding: 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
-  .how h2 { margin: 0 0 6px; font-size: 16px; }
-  .how p { margin: 0; color: var(--muted); }
   footer { padding: 24px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
 </style>
 </head>
@@ -74,20 +70,6 @@
   </div>
   <div class="grid" id="grid"><div class="empty">Loading plugins…</div></div>
 
-  <section class="how">
-    <div>
-      <h2><i class="bi bi-download"></i> Install</h2>
-      <p>In Tessera, open <b>Plugins → Marketplace</b>, pick a plugin and click <b>Install</b>. Every download is checked against its SHA-256.</p>
-    </div>
-    <div>
-      <h2><i class="bi bi-upload"></i> Publish</h2>
-      <p>Put your <code>.tessera-plugin</code> in <code>plugins/</code> and open a pull request. See <a href="https://github.com/CompagesWorks/Tessera-Marketplace/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
-    </div>
-    <div>
-      <h2><i class="bi bi-shop"></i> Your own store</h2>
-      <p>Any GitHub repository with a <code>marketplace.json</code> works. <a href="https://github.com/CompagesWorks/Tessera-Marketplace/blob/main/CONTRIBUTING.md#hosting-your-own-marketplace">Host your own</a>.</p>
-    </div>
-  </section>
 </main>
 
 <footer class="wrap">
