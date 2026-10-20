@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tessera Marketplace</title>
+<meta name="description" content="Plugins for Tessera, the Smash Ultimate modding tool.">
+<link rel="icon" href="assets/tessera.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<style>
+  :root {
+    --bg: #f6f6f8;
+    --card: #ffffff;
+    --text: #16161a;
+    --muted: #63636e;
+    --border: #e2e2e8;
+    --accent: #6d5dfc;
+    --accent-soft: rgba(109, 93, 252, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0e;
+      --card: #16161b;
+      --text: #f1f1f4;
+      --muted: #9a9aa6;
+      --border: #26262e;
+      --accent: #9b8cff;
+      --accent-soft: rgba(155, 140, 255, 0.14);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 56px 0 32px; text-align: center; }
+  header img.logo { width: 72px; height: 72px; }
+  h1 { margin: 12px 0 4px; font-size: 34px; letter-spacing: -0.02em; }
+  .tagline { margin: 0 0 24px; color: var(--muted); }
+  .add img { width: 240px; max-width: 100%; border-radius: 12px; transition: transform 0.15s; }
+  .add:hover img { transform: translateY(-2px); }
+  .toolbar { display: flex; gap: 12px; align-items: center; margin: 8px 0 20px; flex-wrap: wrap; }
+  .toolbar input { flex: 1; min-width: 200px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; }
+  .count { color: var(--muted); font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { display: flex; flex-direction: column; gap: 12px; padding: 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+  .head { display: flex; gap: 12px; align-items: center; }
+  .icon { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 22px; }
+  .name { font-weight: 600; font-size: 16px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .desc { flex: 1; margin: 0; color: var(--muted); }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); font-size: 13px; text-decoration: none; }
+  .btn:hover { border-color: var(--accent); }
+  .empty { padding: 40px; border: 1px dashed var(--border); border-radius: 14px; color: var(--muted); text-align: center; }
+  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 48px 0; }
+  .how div { padding: 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+  .how h2 { margin: 0 0 6px; font-size: 16px; }
+  .how p { margin: 0; color: var(--muted); }
+  footer { padding: 24px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img class="logo" src="assets/tessera.png" alt="">
+  <h1>Tessera Marketplace</h1>
+  <p class="tagline">Plugins for <a href="https://github.com/CompagesWorks/Tessera">Tessera</a>, the Smash Ultimate modding tool.</p>
+  <a class="add" href="add.html?repo=CompagesWorks/Tessera-Marketplace"><img src="assets/add-to-tessera.png" alt="Add repo to Marketplace"></a>
+</header>
+
+<main class="wrap">
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search plugins" aria-label="Search plugins">
+    <span class="count" id="count"></span>
+  </div>
+  <div class="grid" id="grid"><div class="empty">Loading plugins…</div></div>
+
+  <section class="how">
+    <div>
+      <h2><i class="bi bi-download"></i> Install</h2>
+      <p>In Tessera, open <b>Plugins → Marketplace</b>, pick a plugin and click <b>Install</b>. Every download is checked against its SHA-256.</p>
+    </div>
+    <div>
+      <h2><i class="bi bi-upload"></i> Publish</h2>
+      <p>Put your <code>.tessera-plugin</code> in <code>plugins/</code> and open a pull request. See <a href="https://github.com/CompagesWorks/Tessera-Marketplace/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+    </div>
+    <div>
+      <h2><i class="bi bi-shop"></i> Your own store</h2>
+      <p>Any GitHub repository with a <code>marketplace.json</code> works. <a href="https://github.com/CompagesWorks/Tessera-Marketplace/blob/main/CONTRIBUTING.md#hosting-your-own-marketplace">Host your own</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <a href="https://github.com/CompagesWorks/Tessera-Marketplace">CompagesWorks/Tessera-Marketplace</a> · <a href="marketplace.json">marketplace.json</a>
+</footer>
+
+<script>
+  const INDEX = 'https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/marketplace.json';
+  const grid = document.getElementById('grid');
+  const count = document.getElementById('count');
+  const search = document.getElementById('search');
+  let plugins = [];
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  function link(label, icon, href) {
+    const a = el('a', 'btn');
+    a.href = href;
+    a.rel = 'noopener';
+    a.innerHTML = `<i class="bi bi-${icon}"></i>`;
+    a.append(label);
+    return a;
+  }
+
+  function card(plugin) {
+    const box = el('article', 'card');
+    const head = el('div', 'head');
+    const icon = el('span', 'icon');
+    const name = /^[a-z0-9-]{1,40}$/.test(plugin.icon || '') ? plugin.icon : 'puzzle';
+    icon.innerHTML = `<i class="bi bi-${name}"></i>`;
+    const title = el('div');
+    title.append(el('div', 'name', plugin.name), el('div', 'meta', `${plugin.author ? `by ${plugin.author} · ` : ''}v${plugin.version}`));
+    head.append(icon, title);
+    const actions = el('div', 'actions');
+    if (/^https:\/\//.test(plugin.homepage || '')) actions.append(link('Page', 'box-arrow-up-right', plugin.homepage));
+    if (/^https:\/\//.test(plugin.download || '')) actions.append(link('Download', 'file-earmark-zip', plugin.download));
+    box.append(head, el('p', 'desc', plugin.description || 'No description.'), actions);
+    return box;
+  }
+
+  function render() {
+    const query = search.value.trim().toLowerCase();
+    const shown = plugins.filter((p) => !query || `${p.name} ${p.author} ${p.description} ${p.id}`.toLowerCase().includes(query));
+    count.textContent = `${shown.length} plugin${shown.length === 1 ? '' : 's'}`;
+    grid.replaceChildren(...(shown.length ? shown.map(card) : [el('div', 'empty', 'No plugin found.')]));
+  }
+
+  search.addEventListener('input', render);
+  fetch(INDEX, { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((data) => {
+      plugins = (data.plugins || []).filter((p) => p && p.id && p.name && p.version).sort((a, b) => a.name.localeCompare(b.name));
+      render();
+    })
+    .catch(() => grid.replaceChildren(el('div', 'empty', 'Could not load the plugin list.')));
+</script>
+</body>
+</html>

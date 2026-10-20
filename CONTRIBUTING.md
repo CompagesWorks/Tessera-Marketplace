@@ -33,7 +33,7 @@ Tessera reads `marketplace.json` at the root of this repository.
 1. Build the package: `npm run plugin -- pack path/to/plugin`
 2. Put the `.tessera-plugin` file in `plugins/` and open a pull request.
 
-That's it. The **Build marketplace** GitHub Action reads each package's `manifest.json` and fills in `marketplace.json` (name, author, version, description, icon, download link and SHA-256) and the plugin table in the README. On a pull request it only checks that the packages are valid; once merged into `main` it commits the updated files.
+That's it. The **Build marketplace** GitHub Action reads each package's `manifest.json` and fills in `marketplace.json` (name, author, version, description, icon, download link and SHA-256). The [store page](https://compagesworks.github.io/Tessera-Marketplace/) and Tessera both read that file. On a pull request it only checks that the packages are valid; once merged into `main` it commits the updated files.
 
 To ship a new version, add the new package next to the old one. The highest version is listed. Extra fields you add by hand to an entry, like `homepage`, are kept.
 

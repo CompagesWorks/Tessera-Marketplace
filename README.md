@@ -12,11 +12,7 @@ Plugins for [Tessera](https://github.com/CompagesWorks/Tessera), the Smash Ultim
 
 ## Plugins
 
-<!-- plugins:start -->
-| Plugin | What it does | Version |
-|---|---|:-:|
-| <img src="assets/icons/box-seam.svg" width="40" height="40" alt=""><br>**MOSAIC Bridge**<br><sub>by Compages Works</sub> | Exports the project and copies the mod into MOSAIC's mods folder. | `1.0.0` |
-<!-- plugins:end -->
+**[Browse the plugins →](https://compagesworks.github.io/Tessera-Marketplace/)**
 
 ## Install a plugin
 

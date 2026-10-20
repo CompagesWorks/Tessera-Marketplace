@@ -3,7 +3,7 @@ name: Build marketplace
 on:
   push:
     branches: [main]
-    paths: ["plugins/**", "marketplace.json", "scripts/**", "README.md", ".github/workflows/build.yml"]
+    paths: ["plugins/**", "marketplace.json", "scripts/**", ".github/workflows/build.yml"]
   pull_request:
     paths: ["plugins/**", "marketplace.json", "scripts/**"]
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build marketplace.json and the README catalog
+      - name: Build marketplace.json
         run: python scripts/build.py
       - name: Show changes
         run: git status --short && git diff --stat
