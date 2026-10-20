@@ -51,6 +51,8 @@
   .actions { display: flex; gap: 8px; flex-wrap: wrap; }
   .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); font-size: 13px; text-decoration: none; }
   .btn:hover { border-color: var(--accent); }
+  .btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; font-weight: 600; }
+  .btn.primary:hover { filter: brightness(1.1); }
   .empty { padding: 40px; border: 1px dashed var(--border); border-radius: 14px; color: var(--muted); text-align: center; }
   footer { padding: 24px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
 </style>
@@ -77,7 +79,8 @@
 </footer>
 
 <script>
-  const INDEX = 'https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/marketplace.json';
+  const REPO = 'CompagesWorks/Tessera-Marketplace';
+  const INDEX = `https://raw.githubusercontent.com/${REPO}/main/marketplace.json`;
   const grid = document.getElementById('grid');
   const count = document.getElementById('count');
   const search = document.getElementById('search');
@@ -109,6 +112,9 @@
     title.append(el('div', 'name', plugin.name), el('div', 'meta', `${plugin.author ? `by ${plugin.author} · ` : ''}v${plugin.version}`));
     head.append(icon, title);
     const actions = el('div', 'actions');
+    const add = link('Add to Tessera', 'plus-lg', `add.html?repo=${encodeURIComponent(REPO)}&plugin=${encodeURIComponent(plugin.id)}`);
+    add.classList.add('primary');
+    actions.append(add);
     if (/^https:\/\//.test(plugin.homepage || '')) actions.append(link('Page', 'box-arrow-up-right', plugin.homepage));
     if (/^https:\/\//.test(plugin.download || '')) actions.append(link('Download', 'file-earmark-zip', plugin.download));
     box.append(head, el('p', 'desc', plugin.description || 'No description.'), actions);

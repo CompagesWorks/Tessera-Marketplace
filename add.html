@@ -21,12 +21,15 @@
 <script>
   const params = new URLSearchParams(location.search);
   const repo = (params.get('repo') || params.get('url') || '').trim();
-  const valid = /^[A-Za-z0-9_.-]{1,100}\/[A-Za-z0-9_.-]{1,100}$/.test(repo) || /^https:\/\/[^\s]{1,490}$/.test(repo);
+  const plugin = (params.get('plugin') || '').trim();
+  const valid = (/^[A-Za-z0-9_.-]{1,100}\/[A-Za-z0-9_.-]{1,100}$/.test(repo) || /^https:\/\/[^\s]{1,490}$/.test(repo)) && (!plugin || /^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(plugin));
   const message = document.getElementById('message');
   if (valid) {
-    const link = `tessera://marketplace/add?repo=${encodeURIComponent(repo)}`;
-    message.innerHTML = 'Adding the marketplace <code></code> to Tessera…';
-    message.querySelector('code').textContent = repo;
+    const link = plugin
+      ? `tessera://marketplace/install?repo=${encodeURIComponent(repo)}&id=${encodeURIComponent(plugin)}`
+      : `tessera://marketplace/add?repo=${encodeURIComponent(repo)}`;
+    message.innerHTML = plugin ? 'Installing <code></code> in Tessera…' : 'Adding the marketplace <code></code> to Tessera…';
+    message.querySelector('code').textContent = plugin || repo;
     const open = document.getElementById('open');
     open.href = link;
     open.hidden = false;
