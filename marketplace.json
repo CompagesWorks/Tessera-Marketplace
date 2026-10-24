@@ -3,7 +3,7 @@
   "plugins": [
     {
       "id": "compagesworks.mosaic",
-      "name": "MOSAIC Bridge",
+      "name": "MOSAIC Bridge (Test plugin)",
       "author": "Compages Works",
       "version": "1.0.0",
       "description": "Exports the project and copies the mod into MOSAIC's mods folder.",
