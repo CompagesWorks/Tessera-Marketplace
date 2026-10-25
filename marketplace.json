@@ -2,6 +2,66 @@
   "name": "Tessera Marketplace",
   "plugins": [
     {
+      "id": "compagesworks.arc",
+      "name": "ARC Explorer",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Browses the Smash Ultimate data.arc like ArcExplorer and extracts files into an extracted folder of the project.",
+      "icon": "hdd-stack",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.arc-1.0.0.tessera-plugin",
+      "sha256": "0db717e7ed55191fe1b46794dd97a92d680d8ecad761ad6fd4ce9ded4aa8da58"
+    },
+    {
+      "id": "compagesworks.archives",
+      "name": "Archives",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Extracts and repacks SARC archives (layout.arc, .sarc, .szs) like Switch Toolbox.",
+      "icon": "archive",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.archives-1.0.0.tessera-plugin",
+      "sha256": "7c3c17dc945a6e15c1a532caf71c651aef3fd7dca991616ff36781acc3badbab"
+    },
+    {
+      "id": "compagesworks.config",
+      "name": "ARCropolis Config",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Adds project files to the mod's ARCropolis config.json from the Explorer right-click menu.",
+      "icon": "filetype-json",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.config-1.0.0.tessera-plugin",
+      "sha256": "1ae3b814b6b62cf49cfa611ce7235c90b831d1634892905ec57a95548898379a"
+    },
+    {
+      "id": "compagesworks.deploy",
+      "name": "Deploy",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Exports the project and copies the mod into the mods folder of an emulator or the SD card.",
+      "icon": "rocket-takeoff",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.deploy-1.0.0.tessera-plugin",
+      "sha256": "088442385116744cfb53ad635c879cdba83fd7d4711bf6a5fa9a06d859eee817"
+    },
+    {
+      "id": "compagesworks.layouts",
+      "name": "Layouts",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Views and edits .bflyt UI layouts: pane tree, textured preview, positions, sizes, colors and textures, like Switch Toolbox.",
+      "icon": "layout-wtf",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.layouts-1.0.0.tessera-plugin",
+      "sha256": "735705a4438076ceb03a20b49343f2db7a32c2725dd4e4367a623ef9169d92cc"
+    },
+    {
+      "id": "compagesworks.models",
+      "name": "Models",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Views Smash Ultimate models (.numdlb, .numshb) in 3D with their textures, skeleton (.nusktb) and animations (.nuanmb), and edits their materials (.numatb), like SSBH Editor.",
+      "icon": "box",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.models-1.0.0.tessera-plugin",
+      "sha256": "7c31b170f86a5528f6a7c17adc563f364abaf4959e8091ec34814695dd1b988f"
+    },
+    {
       "id": "compagesworks.mosaic",
       "name": "MOSAIC Bridge",
       "author": "Compages Works",
@@ -11,6 +71,66 @@
       "homepage": "https://github.com/CompagesWorks/Tessera-Marketplace",
       "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.mosaic-1.0.0.tessera-plugin",
       "sha256": "8695c759e26062370eaa87c7d47d15ccc96cf54f707f95b1a31e9e149c8281a7"
+    },
+    {
+      "id": "compagesworks.msbt",
+      "name": "MSBT",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Edits game texts in .msbt and .xmsbt files (names, menus, descriptions), like the Switch Toolbox MSBT editor.",
+      "icon": "chat-left-text",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.msbt-1.0.0.tessera-plugin",
+      "sha256": "559b387a03bcaed54300df271f8b39053a6896142ca9018f4baddf92239a880a"
+    },
+    {
+      "id": "compagesworks.nus3audio",
+      "name": "NUS3AUDIO",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Edits Smash Ultimate .nus3audio files: list, rename, extract, replace, add and remove tracks, and create new files. Opens audio files in the editor of your choice, like Audacity.",
+      "icon": "music-note-beamed",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.nus3audio-1.0.0.tessera-plugin",
+      "sha256": "92bb692734676d685994beae10c1b6d2ec30d7b3a81e667bde1498fa6578ebaf"
+    },
+    {
+      "id": "compagesworks.portraits",
+      "name": "Portraits",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Aligns a new render onto every chara_X portrait frame automatically, then cuts portraits with a movable, paintable mask, like SmashAlign.",
+      "icon": "person-bounding-box",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.portraits-1.0.0.tessera-plugin",
+      "sha256": "f4cf80c5bf0016c1df13ffb92dc8324db9aac85819afcb820f23ad5858c3417a"
+    },
+    {
+      "id": "compagesworks.prc",
+      "name": "PRC",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Edits game params in .prc, .stprm and .stdat files (fighter stats, items, stages), with names from ParamLabels.",
+      "icon": "sliders",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.prc-1.0.0.tessera-plugin",
+      "sha256": "b806486160f9c2d9c74d3f438c19dfbfdc599bdddb3b4d30ec52ad66913bba84"
+    },
+    {
+      "id": "compagesworks.textures",
+      "name": "Textures",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Converts textures between .nutexb, .dds, .png and other images, like Ultimate Tex.",
+      "icon": "image",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.textures-1.0.0.tessera-plugin",
+      "sha256": "ac1865948f444e28dfd7a96e71e84bf9fa9d7a21da667dde7bca434d9b972da0"
+    },
+    {
+      "id": "compagesworks.video",
+      "name": "Video",
+      "author": "Tessera",
+      "version": "1.0.0",
+      "description": "Converts videos to .h264 with ffmpeg, the format of Smash Ultimate movies (Final Smash cutscenes).",
+      "icon": "film",
+      "download": "https://raw.githubusercontent.com/CompagesWorks/Tessera-Marketplace/main/plugins/compagesworks.video-1.0.0.tessera-plugin",
+      "sha256": "088c4013cace8d56f50c4552f34c3244880f6944371ca47a87aedf61b2abdd0e"
     }
   ]
 }
